@@ -41,3 +41,15 @@ int main(){
     }
     return 0;
 }
+void temp::signUP(){
+    cout<<"Enter your user name :: ";
+    getline(cin,userName);
+    cout<<"Enter your Email address :: ";
+    getline(cin,Email);
+    cout<<"Enter your password :: ";
+    getline(cin,password);
+
+    file.open("loginData.txt",ios::out|ios::app);
+    file<<userName<<"*"<<Email<<"*"<<password<<endl;
+    file.close();
+}
